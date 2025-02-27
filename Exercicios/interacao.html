@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Alertas</title>
+</head>
+<body>
+    <h1>Exemplo de Alert, Confirm e Prompt</h1>
+    <button onclick="mostrarAlertas()">Clique aqui</button>
+    
+    <script>
+        function mostrarAlertas() {
+            // Exibe um alerta simples
+            alert("Bem-vindo à nossa página!");
+            
+            // Exibe uma caixa de confirmação
+            let resposta = confirm("Você deseja continuar?");
+
+            if (resposta) {
+                // Se o usuário clicar em "OK", pede o nome dele
+                let nome = prompt("Qual é o seu nome?");
+                if (nome) {
+                    alert(`Olá, ${nome}! Seja bem-vindo!`);
+                } else {
+                    alert("Você não digitou um nome.");
+                }
+            } else {
+                alert("Você escolheu sair.");
+            }
+        }
+    </script>
+</body>
+</html>
